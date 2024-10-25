@@ -17,6 +17,12 @@ pub enum SPP {
 }
 
 impl Sstatus {
+    /// Returns the contents of the register as raw bits
+    #[inline]
+    pub fn bits(&self) -> usize {
+        self.bits
+    }
+
     /// Supervisor Interrupt Enable
     #[inline]
     pub fn sie(&self) -> bool {
@@ -99,7 +105,8 @@ impl Sstatus {
 }
 
 read_csr_as!(Sstatus, 0x100);
-write_csr!(0x100);
+// write_csr!(0x100);
+write_csr_as_usize!(0x100);
 set!(0x100);
 clear!(0x100);
 

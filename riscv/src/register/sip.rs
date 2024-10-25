@@ -33,6 +33,7 @@ impl Sip {
 }
 
 read_csr_as!(Sip, 0x144);
+write_csr_as_usize!(0x144);
 set!(0x144);
 clear!(0x144);
 

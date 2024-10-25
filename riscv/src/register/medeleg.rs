@@ -93,6 +93,7 @@ impl Medeleg {
 }
 
 read_csr_as!(Medeleg, 0x302);
+write_csr_as_usize!(0x302);
 set!(0x302);
 clear!(0x302);
 

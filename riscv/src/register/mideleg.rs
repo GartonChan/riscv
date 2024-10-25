@@ -33,6 +33,7 @@ impl Mideleg {
 }
 
 read_csr_as!(Mideleg, 0x303);
+write_csr_as_usize!(0x303);
 set!(0x303);
 clear!(0x303);
 

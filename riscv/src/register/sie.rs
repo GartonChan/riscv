@@ -33,6 +33,7 @@ impl Sie {
 }
 
 read_csr_as!(Sie, 0x104);
+write_csr_as_usize!(0x104);
 set!(0x104);
 clear!(0x104);
 
@@ -45,3 +46,8 @@ set_clear_csr!(
 set_clear_csr!(
     /// Supervisor External Interrupt Enable
     , set_sext, clear_sext, 1 << 9);
+//// Writes the CSR
+// #[inline]
+// pub unsafe fn write(bits: usize) {
+//     _write(bits)
+// }

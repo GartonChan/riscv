@@ -51,6 +51,8 @@ impl Mip {
 }
 
 read_csr_as!(Mip, 0x344);
+// write_csr!(0x344);
+write_csr_as_usize!(0x344);
 set!(0x344);
 clear!(0x344);
 

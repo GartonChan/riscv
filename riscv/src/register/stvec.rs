@@ -34,10 +34,11 @@ impl Stvec {
 }
 
 read_csr_as!(Stvec, 0x105);
-write_csr!(0x105);
+// write_csr!(0x105);
+write_csr_as_usize!(0x105);
 
-/// Writes the CSR
-#[inline]
-pub unsafe fn write(addr: usize, mode: TrapMode) {
-    _write(addr + mode as usize);
-}
+//// Writes the CSR
+// #[inline]
+// pub unsafe fn write(addr: usize, mode: TrapMode) {
+//     _write(addr + mode as usize);
+// }

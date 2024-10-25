@@ -51,6 +51,7 @@ impl Mie {
 }
 
 read_csr_as!(Mie, 0x304);
+write_csr_as_usize!(0x304);
 set!(0x304);
 clear!(0x304);
 
